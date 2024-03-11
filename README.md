@@ -37,12 +37,14 @@ Follow these steps to install and run the project:
 
 apis and there responses ->
 1. POST-> http://127.0.0.1:8000/api/login
+Payload->
 {
     "email": "riddhi@gmail.com",
     "password": "riddhi@123"
 }
 
 2. POST -> http://127.0.0.1:8000/api/register
+Payload->
 {
     "name": "riddhi",
     "email": "riddhi@gmail.com",
@@ -50,9 +52,11 @@ apis and there responses ->
 }
 
 3. POST -> http://127.0.0.1:8000/api/tasks
+
 in case page redirecting to home or validation part not working in postman 
 You must set a header in your request: Accept => application/json
 then it will return validation errors as json
+Payload->
 {
     "subject": "math",
     "description": "test",
@@ -75,8 +79,5 @@ then it will return validation errors as json
 4. GET-> http://127.0.0.1:8000/api/tasks?search_keywords=[{%22key%22:%22priority%22,%22value%22:%22hi%22},{%22key%22:%22status%22,%22value%22:%22new%22}]
 
 5. POST -> http://127.0.0.1:8000/api/upload
-
+Payload->
 form-data -->  attachments[] -> select multiple files
-
-
-# task_management_app
