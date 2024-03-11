@@ -16,8 +16,8 @@ Please note that these are test credentials for testing purposes only.
 Follow these steps to install and run the project:
 
 1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the project directory: `cd task_management_application`
-3. Install dependencies: `composer install`
+2. Navigate to the project directory: `cd task_management_app`
+3. Install dependencies: `composer update` or `composer update --ignore-platform-req=ext-sodium` 
 4. Set up environment variables: `cp .env.example .env`
 5. Configure database settings in `.env` file
                                     DB_CONNECTION=mysql
@@ -28,10 +28,12 @@ Follow these steps to install and run the project:
                                     DB_PASSWORD=
     after setup env variables optimize cache
     run ->`php artisan optimize`
-6. Generate application key: `php artisan key:generate`
+    start mysql server and create database task_management_app
+6. Run migrations: `php artisan migrate`
+7. Generate application key: `php artisan key:generate`
                               `php artisan passport:keys` 
                               `php artisan passport:client --personal`
-7. Run migrations: `php artisan migrate`
+
 8. Start the development server: `php artisan serve`
 9. Access the application in your browser: `http://localhost:8000`
 
